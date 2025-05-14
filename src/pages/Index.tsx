@@ -162,40 +162,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-white to-blue-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <span className="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-4">Testimonials</span>
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-900 to-purple-800 bg-clip-text text-transparent">
-              What Our Users Say
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <TestimonialCard 
-              quote="The chatbot helped me understand their services better without needing to schedule a call. I got all the information I needed to make a decision."
-              author="Sarah Johnson"
-              position="Marketing Director"
-              delay={0}
-            />
-            
-            <TestimonialCard 
-              quote="As a returning client, the chatbot made it super easy to request updates to my existing project. Saved me so much time!"
-              author="Michael Chen"
-              position="Product Owner"
-              delay={300}
-            />
-            
-            <TestimonialCard 
-              quote="I was looking for a job opportunity and the chatbot guided me to the right openings based on my skills. Very impressive!"
-              author="Alex Rodriguez"
-              position="Frontend Developer"
-              delay={600}
-            />
-          </div>
-        </div>
-      </section>
+    
 
       {/* CTA Footer Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-900 to-purple-900 text-white relative overflow-hidden">

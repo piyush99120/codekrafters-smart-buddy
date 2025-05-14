@@ -1,10 +1,10 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { MessageCircle, Check, Lock, Brain, FileText, Users, ArrowRight, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import ChatbotModal from "@/components/ChatbotModal";
+import HowItWorks from "@/components/HowItWorks";
 
 const Index = () => {
   return (
@@ -124,39 +124,7 @@ const Index = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-purple-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <span className="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-4">Simple Process</span>
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-900 to-purple-800 bg-clip-text text-transparent">
-              How It Works
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <StepCard 
-              number={1}
-              title="Click the chatbot icon"
-              description="Find the chat icon on any page of our website to start a conversation."
-              delay={0}
-            />
-            
-            <StepCard 
-              number={2}
-              title="Ask your question"
-              description="Type your query or explore our services through guided options."
-              delay={300}
-            />
-            
-            <StepCard 
-              number={3}
-              title="Get instant replies"
-              description="Receive accurate answers or be connected to a real expert if needed."
-              delay={600}
-            />
-          </div>
-        </div>
-      </section>
+      <HowItWorks />
 
       {/* Use Cases Section */}
       <section className="py-20 px-4 bg-white relative">
@@ -285,22 +253,6 @@ const FeatureCard = ({ icon, title, description, color, delay }: { icon: React.R
         <p className="text-gray-600">{description}</p>
       </CardContent>
     </Card>
-  );
-};
-
-// Component for how it works steps
-const StepCard = ({ number, title, description, delay }: { number: number, title: string, description: string, delay: number }) => {
-  return (
-    <div 
-      className="text-center opacity-0 animate-fade-in"
-      style={{ animationDelay: `${delay}ms`, animationFillMode: 'forwards' }}
-    >
-      <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-2xl font-bold flex items-center justify-center mb-4 mx-auto transform transition-all duration-500 hover:scale-110 hover:rotate-12">
-        {number}
-      </div>
-      <h3 className="text-xl font-semibold mb-2 text-blue-900">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
   );
 };
 
